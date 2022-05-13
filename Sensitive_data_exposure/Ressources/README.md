@@ -15,18 +15,18 @@ Generally, our sensitive information includes passwords, financial data, medical
 
 ## /robots.txt
 
-    A page content some information:
+    A page contains some information:
     User-agent: *
     Disallow: /whatever
     Disallow: /.hidden
 
 ## /whaterver
 
-    A index page content a "htpasswd" file.
+    A index page contains a "htpasswd" file.
 
 
 ## htpasswd
-    A file content "root:8621ffdbc5698829397d97767ac13db3"
+    A file contains "root:8621ffdbc5698829397d97767ac13db3"
     8621ffdbc5698829397d97767ac13db3 -> MD5 hash -> after crack: dragon
     That i think is a admin account password
 
