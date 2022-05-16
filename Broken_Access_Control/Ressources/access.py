@@ -1,34 +1,42 @@
 import requests
 
+def _getName(line):
+  return line[line.find('href="') + 6 : line.find('">') if line.find('README') != 0 else line.find('/"')]
+
 def linesParsing(index):
   linesArray = index.text.split('\n');
   lines = filter(lambda line: '<a' in line and '../' not in line, linesArray)
-  return lines
+  newLines = map(_getName, lines)
+  return newLines
 
-def getName(line):
-  line[line.find('href="') + 6 : line.find('">') if line.find('README') != 0 else line.find('/"')]
-
-def getContent(url):
+def _getContent(url):
   newReq = requests.get(url)
+  if newReq.status_code == 404:
+    return None
   return newReq.text
 
-def recursive(index):
-  for x in index:
-    path = getName(x)
-    print(path)
-    if str(path) == 'README':
-      result = getContent(url + path)
-      readmeArray.append(result)
-      print('result: ' + result)
-      return
+def addResToArray(url):
+  result = _getContent(url);
+  if result != None:
+    readmeArray.append(result[:-1])
+    f.write(result);
+    print(url, ': ', result[:-1]);
+
+def recursive(url):
+  addResToArray(url + 'README')
+  req = requests.get(url)
+  index = list(linesParsing(req))
+  for i in index:
+    if i != 'README':
+      recursive(url + i)
     else:
-      newIndex = list(linesParsing(requests.get(url + str(path))))
-      recursive(newIndex)
+      addResToArray(url + i + 'README')
+      return
 
 url = 'http://192.168.56.101/.hidden/'
-
-req = requests.get(url)
-index = list(linesParsing(req))
 readmeArray = []
+f = open("result.txt", "w")
 
-recursive(index)
+recursive(url)
+
+f.close()
