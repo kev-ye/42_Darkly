@@ -11,4 +11,9 @@ This attack is also known as “dot-dot-slash”, “directory traversal”, “
     /etc/passwd is unix password file
 
     So i try this: http://192.168.56.101/?page=../../../../../../../../../etc/passwd.
-    And i get a flag: b12c4b2cb8094750ae121a676269aa9e2872d07c06e429d25a63196ec1c8c1d0 
+    And i get a flag: b12c4b2cb8094750ae121a676269aa9e2872d07c06e429d25a63196ec1c8c1d0
+
+## Solutions:
+
+    - Ensure the user cannot supply all parts of the path – surround it with your path code
+    - Prefer working without user input when using file system calls

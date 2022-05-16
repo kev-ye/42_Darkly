@@ -14,3 +14,8 @@ Confirmation of the user's identity, authentication, and session management is c
 
     After page refresh with the new cookies valus, i get a alert message that's a flag: df2eb4ba34ed059a1e3e89ff4dfc13445f104a1a52295214def1c4fb1693a5c3
 
+## Solutions
+
+    - Add multi-factor authentication
+    - Do not ship or deploy with any default credentials, particularly for admin users.
+    - Use a server-side, secure, built-in session manager that generates a new random session ID with high entropy after login. Session identifier should not be in the URL, be securely stored, and invalidated after logout, idle, and absolute timeouts.
