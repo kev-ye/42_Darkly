@@ -9,4 +9,7 @@ The Web Parameter Tampering attack is based on the manipulation of parameters ex
     In survey page, i found a grade use a select element with 1-10 options values.
     So i try modify some invalid value and finally i get a flag: 03a944b434d5baff05f46c4bede5792551a2595574bcafc9a6e25f67c382ccaa
 
-## Solution
+## Solutions
+
+    - Using regex to limit or validate data
+    - Server-side validation compared with all inputs

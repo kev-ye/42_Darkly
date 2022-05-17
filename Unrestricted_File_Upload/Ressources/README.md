@@ -15,3 +15,9 @@ Uploaded files represent a significant risk to applications. The first step in m
     I re-upload a php file and modify the headers: (in Mozilla Firefox)
     "Content-Type: application/x-php" -> "Content-Type: image/jpeg".
     And finally i get the Flag: 46910d9ce35b385885a9f7e2b336249d622f29b267a1771fbacf52133beddba8
+
+## Solutions
+
+    - Allow Listing File Extensions
+    - Using a File Type Detector
+    - Check if is a file adapted

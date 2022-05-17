@@ -16,6 +16,6 @@ Confirmation of the user's identity, authentication, and session management is c
 
 ## Solutions
 
-    - Add multi-factor authentication
+    - Add multi-factor authenticationDo not ship or deploy with any default credentials, particularly for admin users
     - Do not ship or deploy with any default credentials, particularly for admin users.
     - Use a server-side, secure, built-in session manager that generates a new random session ID with high entropy after login. Session identifier should not be in the URL, be securely stored, and invalidated after logout, idle, and absolute timeouts.

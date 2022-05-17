@@ -11,4 +11,8 @@ The Web Parameter Tampering attack is based on the manipulation of parameters ex
     So i just trying modify the email and click on submit.
     And finally i get a flag: 1d4855f7337c0c14b6f44946872c4eb33853f40b2d54393fbe94f49f1e19bbb0
 
-## Solution
+## Solutions
+
+    - Implement Secure Password Recovery Mechanism
+    - Don't stock sensitive information on front-end user-interface
+    - Avoid unwanted or hidden data

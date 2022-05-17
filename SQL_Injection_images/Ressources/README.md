@@ -50,3 +50,7 @@ A SQL injection attack consists of insertion or “injection” of a SQL query v
     albatroz -> ater SHA256 -> f2a29020ef3132e01dd61df97fd33ec8d7fcd1388cc9601e7db691d17d4d6188
 
 ## Solutions
+
+    - Use of Prepared Statements
+    - Allow-list Input Validation
+    - Escaping All User Supplied Input

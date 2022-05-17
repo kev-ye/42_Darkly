@@ -99,3 +99,7 @@ A SQL injection attack consists of insertion or “injection” of a SQL query v
 
 
 ## Solutions
+
+    - Use of Prepared Statements
+    - Allow-list Input Validation
+    - Escaping All User Supplied Input
